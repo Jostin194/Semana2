@@ -21,7 +21,8 @@ Solución basada en el diseño de un sistema básico de gestión de restaurante 
 
 ### Importancia de Modularizar el Software y Separar Responsabilidades
 
-* **Estructura y Organización:** El diseño modular permite fragmentar un sistema complejo en componentes o archivos independientes más pequeños. Al separar los modelos de datos (`modelos/`) y (`servicios/`), el código se vuelve mas facil de complender, limpio y ordenado.
-
-* **Mantenimiento y Depuración:** Al asignar una sola tarea a cada clase, se facilita el mantenimineto de errores. Si falla algo en los clientes o en los productos, se modificaria solo el archivo específico sin romper el resto del codigo.
-* **Escalabilidad y Reutilización:** Un único script largo se vuelve imposible de manejar al crecer. La modularidad en POO crea bloques de construcción independientes, permitiendo añadir nuevas funciones para mejorrar el sistema de restaurante a futuro de forma rápida y ordenada.
+* **Estructura y Organización:** Permite fragmentar un sistema complejo en archivos independientes. Al separar los datos (`modelos/`) de la lógica (`servicios/`), el código es más limpio, ordenado y fácil de comprender.
+* **Mantenimiento y Depuración:** Al asignar una sola tarea a cada clase se aíslan los errores. Si falla un cliente o producto, se corrige su archivo específico sin alterar ni romper el resto del sistema.
+* **Escalabilidad y Reutilización:** Evita los scripts largos e inmanejables. Crea bloques de construcción independientes que permiten añadir nuevas funciones al restaurante a futuro de forma rápida.
+* **Uso de Convenciones Normalizadas:** La aplicación de `PascalCase` para clases (`Producto`, `Cliente`) y `snake_case` para variables/métodos (`lista_productos`, `crear_pedido`) cumple el estándar PEP 8. Los identificadores descriptivos eliminan la ambigüedad y vuelven al software autodocumentado.
+* **Coherencia en Tipos de Datos:** Las anotaciones de tipo garantizan la integridad del sistema. Se usa `float` para el precio por precisión decimal; `bool` en la disponibilidad para optimizar el control de la cocina; y `str` para el celular para evitar la pérdida de ceros a la izquierda. Finalmente, las **listas** (datos compuestos) agrupan y relacionan los objetos dinámicamente en memoria, simulando un entorno real.
